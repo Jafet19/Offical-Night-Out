@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
-import Auth from './Auth/Auth';
-import Register from './Auth/Register';
-// import Navbar from './NavBar';
+import { Routes, Route } from 'react-router-dom'
+import Register from './Auth-Register/Register';
+import NavBar from './NavBar/NavBar';
+import './App.scss'
 
 function App() {
   const [user, setUser] = useState(null)
@@ -23,24 +24,23 @@ function App() {
     setNeedToRegister(value);
   }
 
-  // function onLogout() {
-  //   setUser('');
-  // }
+  function onLogout() {
+    setUser('');
+  }
 
   if (!user) {
-    //RENDER BASED ON REGISTER OR LOGIN
-    const RenderUser = needToRegister ? (
-      <Register onLogin={onLogin} onCancelClick={onRegister} />
-    ) : (
-      <Auth onLogin={onLogin} onRegisterClick={onRegister} />
-    );
-    return RenderUser;
+    //RENDER REGISTER OR LOGIN FORM
+    return(
+      <Register onLogin={onLogin} onCancel={onRegister} />
+    )
   } else {
     return (
-    <div className='App'>
-      <h1>Hello</h1>
-    </div>
-  );
-}
+      <div className='App'>
+          <Routes>
+            <Route path='/' element={<NavBar onLogout={onLogout}/>} />
+          </Routes>
+      </div>
+    );
+  }
 }
 export default App;

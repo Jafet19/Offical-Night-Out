@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :reviews
+  resources :categories
+  resources :options
   resources :users
   resources :sessions
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

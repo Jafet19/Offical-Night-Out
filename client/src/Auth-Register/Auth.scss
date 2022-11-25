@@ -1,0 +1,178 @@
+//  For signup/signin
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+* {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.align-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.flex-col {
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+p {
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 10px;
+}
+h2 {
+    color: black;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+	width: 768px;
+	max-width: 100%;
+	min-height: 480px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.35);
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+.form-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    padding: 0 50px;
+    background-color: white;
+    transition: 1s ease-in-out;
+}
+
+.social-container a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border-radius: 50%;
+    border: 1px solid black;
+    text-decoration: none;
+    margin: 0 5px;
+    color: black;
+}
+.social-container a i {
+    transform: scale(0.9);
+    transition: 0.4s ease-in-out;
+}
+.social-container a:hover i {
+    transform: scale(1.4);
+    color: #339af0;
+}
+.form-container span {
+    margin-top: 25px;
+    font-size: 12px;
+}
+.form-container input {
+    display: inline;
+    padding: 10px 20px;
+    margin: 7.5px 0;
+    width: 100%;
+    background: #eee;
+    border: none;
+}
+
+.btn {
+    margin-top: 15px;
+    padding: 12px 45px;
+    background-color: #FF4B2B;
+    border-radius: 24px;
+    outline: none;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 1px;
+}
+.btn:active {
+    transform: scale(0.95);
+}
+
+.form-container.signup-container {
+    z-index: 1;
+    opacity: 0;
+}
+.form-container.signin-container {
+    z-index: 2;
+}
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: white;
+}
+.overlay h2,
+.overlay p 
+{
+    color: white;
+} 
+.panel-sign-up {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    background-color: red;
+    z-index: 100;
+    transition: 1s ease-in-out;
+}
+.panel-sign-in {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(100%);
+    background-color: red;
+    transition: 1s ease-in-out;
+}
+.btn-transparent {
+    border: 1px solid white;
+    background-color: transparent;
+}
+.container.change .signin-container {
+    transform: translateX(100%);
+}
+.container.change .signup-container {
+    transform: translateX(100%);
+    z-index: 5;
+    opacity: 1;
+}
+.container.change .panel-sign-up {
+    transform: translateX(-100%);
+}
+.container.change .panel-sign-in {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
