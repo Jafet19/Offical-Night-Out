@@ -2,7 +2,10 @@ import { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom'
 import Register from './Auth-Register/Register';
 import NavBar from './NavBar/NavBar';
+import Option from './Option';
 import './App.scss'
+import AccountUpdate from './Account/AccountUpdate';
+import Profile from './Account/Profile';
 
 function App() {
   const [user, setUser] = useState(null)
@@ -29,7 +32,6 @@ function App() {
   }
 
   if (!user) {
-    //RENDER REGISTER OR LOGIN FORM
     return(
       <Register onLogin={onLogin} onCancel={onRegister} />
     )
@@ -38,6 +40,9 @@ function App() {
       <div className='App'>
           <Routes>
             <Route path='/' element={<NavBar onLogout={onLogout}/>} />
+            <Route path='/Options' element={<Option/>}/>
+            <Route path='/Profile' element={<Profile user={user}/>}/>
+            <Route path='/Account-Update' element={<AccountUpdate user={user} setUser={setUser}/>}/>
           </Routes>
       </div>
     );

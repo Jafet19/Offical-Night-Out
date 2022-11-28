@@ -14,15 +14,18 @@ function NavBar({ onLogout }) {
   return (
     <div className="nav-bar">
       <div className='Logo'>
-        Outing
+      <Link to='/'>Outing</Link>
       </div>
       <nav className='item'>
         <ul className='ul'>
           <li>
-            <Link to='/'>Home</Link>
+            <Link to='/Options'>options</Link>
           </li>
           <li>
-            <Link to='/options'>options</Link>
+            <Link to='/Account-Update'>Account</Link>
+          </li>
+          <li>
+            <Link to='/Profile'>Profile</Link>
           </li>
           <li>
             <Link to='/' onClick={handleLogout}>logout</Link>

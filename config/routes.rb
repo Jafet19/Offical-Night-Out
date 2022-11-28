@@ -12,4 +12,6 @@ Rails.application.routes.draw do
   post '/register', to: "users#register"
   post '/login', to: "sessions#create"
   delete '/logout', to: "sessions#destroy"
+
+  patch 'AccountUpdate', to: 'users#update'
 end
