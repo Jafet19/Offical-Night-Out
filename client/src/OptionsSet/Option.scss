@@ -1,6 +1,62 @@
-// h2{
-//     color: antiquewhite;
-// }
-// p{
-//     color: antiquewhite;
-// }
+.Card{
+    background-color: transparent;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 3px;
+}
+
+.container-2{
+    flex: 1 0 500px;
+    box-sizing: border-box;
+    margin: 1rem .25em;
+}
+
+@media screen and (min-width: 40em) {
+    .container-2 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+ 
+    .container-2 {
+        max-width: calc(50% -  1em);
+    }
+}
+
+@media screen and (min-width: 60em) {
+    .container-2 {
+        max-width: calc(25% - 1em);
+   }
+}
+
+.button {
+  background-color: rgba(51, 51, 51, 0.05);
+  border-radius: 8px;
+  border-width: 0;
+  color: #333333;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 10px 12px;
+  text-align: center;
+  transition: all 200ms;
+  vertical-align: baseline;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.feedback-input{
+    width: 200px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 0;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+}

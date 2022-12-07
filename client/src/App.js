@@ -5,6 +5,7 @@ import NavBar from './NavBar/NavBar';
 import Option from './OptionsSet/Option';
 import './App.scss'
 import Profile from './Account/Profile';
+import Home from './Home';
 
 function App() {
   const [user, setUser] = useState(null)
@@ -38,8 +39,9 @@ function App() {
   } else {
     return (
       <div className='App'>
+        <div className='snow'></div>
           <Routes>
-            <Route path='/' element={<NavBar onLogout={onLogout}/>} />
+            <Route path='/' element={<Home setUser={setUser}/>} />
             <Route path='/Options' element={<Option/>}/>
             <Route path='/Profile' element={<Profile user={user} setUser={setUser}/>}/>
           </Routes>

@@ -1,15 +1,126 @@
-// @import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap');
 
-// *{
-//   margin: 0;
-//   padding: 0;
-//   font-family: 'Marck Script', cursive;
-// }
+*{
+    font-family: 'Covered By Your Grace', cursive;
+}
 
-// body {
-//   background-image: url(./Auth-Register/Background.jpeg);
-//   background-size: cover;
-//   background-repeat: no-repeat;
-//   width: 100%;
-//   height: 100vh;
-// }
+body {
+    background-color: #ffcfd2;
+}
+
+// snow
+.snow {
+    opacity: 60%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 120%;
+    height: 100%;
+    pointer-events: none;
+    animation: snow-direction cubic-bezier(2, 0, 2, 1) 4s both alternate infinite;
+  }
+  
+  @keyframes snow-direction {
+    from {
+      transform: translateX(-10%);
+    }
+    to {
+      transform: translateX(10%);
+    }
+  }
+  
+  .snow:before,
+  .snow:after {
+    content: '';
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    filter: blur(1px);
+    animation: snow 10s linear infinite;
+    box-shadow:
+      -5vw 10vh #fff,
+      30vw 5vh #fff,
+      55vw 5vh #fff,
+      75vw 10vh #fff,
+      105vw 15vh #fff,
+      -10vw 30vh #fff,
+      40vw 25vh #fff,
+      60vw 20vh #fff,
+      90vw 25vh #fff,
+      20vw 40vh #fff,
+      5vw 45vh #fff,
+      65vw 45vh #fff,
+      105vw 40vh #fff,
+      50vw 50vh #fff,    
+      30vw 50vh #fff,
+      10vw 55vh #fff,
+      20vw 60vh #fff,
+      40vw 65vh #fff,
+      60vw 60vh #fff,
+      80vw 65vh #fff,
+      5vw 70vh #fff,
+      30vw 75vh #fff,
+      55vw 85vh #fff,
+      75vw 80vh #fff,
+      105vw 75vh #fff,
+      20vw 90vh #fff,
+      -5vw 95vh #fff,
+      65vw 95vh #fff,
+      100vw 90vh #fff,
+      
+      -5vw 110vh #fff,
+      30vw 105vh #fff,
+      55vw 105vh #fff,
+      75vw 110vh #fff,
+      105vw 115vh #fff,
+      -10vw 130vh #fff,
+      40vw 125vh #fff,
+      60vw 120vh #fff,
+      90vw 125vh #fff,
+      20vw 140vh #fff,
+      5vw 145vh #fff,
+      65vw 145vh #fff,
+      105vw 140vh #fff,
+      50vw 150vh #fff,    
+      30vw 150vh #fff,
+      10vw 155vh #fff,
+      20vw 160vh #fff,
+      40vw 165vh #fff,
+      60vw 160vh #fff,
+      80vw 165vh #fff,
+      5vw 170vh #fff,
+      30vw 175vh #fff,
+      55vw 185vh #fff,
+      75vw 180vh #fff,
+      105vw 175vh #fff,
+      20vw 190vh #fff,
+      -5vw 195vh #fff,
+      65vw 195vh #fff,
+      100vw 190vh #fff;
+  }
+  
+  .snow:after {
+    position: absolute;
+    left: 50px;
+    top: 60px;
+    animation-duration: 6s;
+    width: 8px;
+    height: 8px;
+    opacity: 0.7;
+    filter: blur(3px);
+  }
+  
+  @keyframes snow {
+    from {
+      transform: rotate(10deg) translateY(-100vh);
+    }
+    to {
+      transform: rotate(10deg) translateY(0);
+    }
+  }

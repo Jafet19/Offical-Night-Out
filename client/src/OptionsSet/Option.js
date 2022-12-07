@@ -5,7 +5,6 @@ import OptionAddForm from './OptionAddForm';
 
 function Option() {
     const [options, setOptions] = useState([]);
-    console.log(options)
     
     useEffect(() => {
         fetch('/options')
@@ -15,9 +14,7 @@ function Option() {
 
     function handleDelete(id){
         const updatedObj = options.filter(option => option.id !== id)
-        // debugger
         setOptions(updatedObj)
-        console.log('should delete')
     }
     
     function handleAdd(newOption){
@@ -34,10 +31,12 @@ function Option() {
         />
       ))
     return (
-        <div className='strip'>
+        <div className='Option'>
             <NavBar />
+            <div className='Card'>
            {card}
            <OptionAddForm addOn={handleAdd}/>
+           </div>
         </div>
     )
 }

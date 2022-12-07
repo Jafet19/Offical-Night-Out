@@ -3,7 +3,11 @@ import { Link } from 'react-router-dom'
 import './NavBar.scss'
 
 
-function NavBar({ onLogout }) {
+function NavBar({ setUser}) {
+
+  function onLogout() {
+    setUser('');
+  }
 
   function handleLogout() {
     fetch("/logout", {

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Option.scss'
 
 function OptionAddForm({ addOn }){
     const [name, setName] = useState('')
@@ -32,8 +33,7 @@ function OptionAddForm({ addOn }){
                 <input name="name" type="text" className="feedback-input" placeholder="Name" value={name} onChange={(e)=> setName(e.target.value)}/>   
                 <input name="text" type="text" className="feedback-input" placeholder="Location" value={location} onChange={(e)=> setLocation(e.target.value)} />
                 <input name="text" type="text" className="feedback-input" placeholder="Place's Url"  value={url} onChange={(e)=> setUrl(e.target.value)}/>
-                <input name="text" type="text" className="feedback-input" placeholder="ID"  value={categoryId} onChange={(e)=> setCategoryId(e.target.value)}/>
-                <input type="submit" value="Submit"/>
+                <input  className="button" type="submit" value="Submit"/>
               </form>
               </div>
     )

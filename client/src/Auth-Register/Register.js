@@ -81,6 +81,30 @@ function Register({ onLogin, onCancel }) {
 
     return (
         <div className="container">
+            <div className="background">
+                <div className="night">
+                    <div className="shooting_star"></div>
+                    <div className="shooting_star"></div>
+                    <div className="shooting_star"></div>
+                    <div className="shooting_star"></div>
+                    <div className="shooting_star"></div>
+                    <div className="shooting_star"></div>
+                    <div className="shooting_star"></div>
+                    <div className="shooting_star"></div>
+                    <div className="shooting_star"></div>
+                    <div className="shooting_star"></div>
+                    <div className="shooting_star"></div>
+                    <div className="shooting_star"></div>
+                    <div className="shooting_star"></div>
+                    <div className="shooting_star"></div>
+                    <div className="shooting_star"></div>
+                    <div className="shooting_star"></div>
+                    <div className="shooting_star"></div>
+                    <div className="shooting_star"></div>
+                    <div className="shooting_star"></div>
+                    <div className="shooting_star"></div>
+                </div>
+            </div>
             <div className="form-container signin-container align-center flex-col">
                 <h2>Sign in</h2>
                 <div className="social-container align-center">
@@ -89,7 +113,7 @@ function Register({ onLogin, onCancel }) {
                     <a href="https://www.linkedin.com"><i className="fab fa-linkedin-in"></i></a>
                 </div>
                 <span>or use your account</span>
-                <input type="text" id='username' value={username}onChange={(e) => setUsername(e.target.value)} />
+                <input type="text" id='username' value={username} onChange={(e) => setUsername(e.target.value)} />
                 <input type="password" id='password' value={password} onChange={(e) => setPassword(e.target.value)} />
                 <p>Forgot your password?</p>
                 <button type="submit" className="btn" onClick={handleLogin}>
@@ -110,7 +134,7 @@ function Register({ onLogin, onCancel }) {
                 <input type="text" name="" value={username} onChange={(e) => setUsername(e.target.value)} />
                 <input type="password" name="" value={password} onChange={(e) => setPassword(e.target.value)} />
                 <input type="password" name="" value={passwordConfirmation} onChange={(e) => setPasswordConfirmation(e.target.value)} />
-                <button type="submit" className="btn"  onClick={handleRegister}>
+                <button type="submit" className="btn" onClick={handleRegister}>
                     Sign up
                 </button>
             </div>

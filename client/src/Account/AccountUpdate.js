@@ -21,9 +21,6 @@ function AccountUpdate({ user, setUser }) {
 
     function ChangeInfo(event) {
         event.preventDefault()
-        // user.image = event.target.image.value 
-        // user.name = event.target.name.value
-        // user.bio = event.target.bio.value
         const newUser = {
           image: event.target.image.value,
           name: event.target.name.value,
