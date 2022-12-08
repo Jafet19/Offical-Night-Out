@@ -6,14 +6,27 @@ function Profile({ user, setUser } ){
     const [show, setShow] = useState(false)
 
     return(
-        <div>
+        <div className="main">
             <NavBar/>
-            <h1>Hello {user.name}</h1>
-            <img src={user.image} alt={user.username} width={100} height={100} />
-            <p>{user.bio}</p>
-            <button onClick={()=> setShow((show)=> !show)}>Show/hide form</button>
-        {show ? <AccountUpdate user={user} setUser={setUser}/> : false}
+        <div className="container">
+            <div className="gradient">
+                <div className="content">
+                <img className='Profile-Image' src={user.image} alt={user.name}/>
+                    <h2>{user.username}</h2>
+                    <p>My name is: {user.name}</p>
+                    <p className="details">{user.bio}</p>
+                    <div className="icons">
+                        <i className="fa fa-facebook-square" aria-hidden="true"></i>
+                        <i className="fa fa-twitter" aria-hidden="true"></i>
+                        <i className="fa fa-instagram" aria-hidden="true"></i>
+                        <i className="fa fa-pinterest" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
         </div>
+        <button className="button-28" onClick={()=> setShow((show)=> !show)}>Edit Profile</button>
+{show ? <AccountUpdate user={user} setUser={setUser}/> : false}
+</div>
     )
 }
 

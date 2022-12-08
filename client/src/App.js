@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom'
 import Register from './Auth-Register/Register';
-import NavBar from './NavBar/NavBar';
 import Option from './OptionsSet/Option';
 import './App.scss'
 import Profile from './Account/Profile';

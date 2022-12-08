@@ -1,0 +1,174 @@
+.Info-form{
+    width: 200px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 0;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+}
+
+
+//submit button
+.button-52 {
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 13px 20px 13px;
+  outline: 0;
+  border: 1px solid black;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-52:after {
+  content: "";
+  background-color: #ffe5d9;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+}
+
+.button-52:hover:after {
+  top: 0px;
+  left: 0px;
+}
+
+@media (min-width: 768px) {
+  .button-52 {
+    padding: 13px 50px 13px;
+  }
+}
+
+/* Show form button */
+.button-28 {
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #3B3B3B;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+  will-change: transform;
+}
+
+.button-28:disabled {
+  pointer-events: none;
+}
+
+.button-28:hover {
+  color: #fff;
+  background-color: #1A1A1A;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.button-28:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+// profile card
+
+.main {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.container {
+  height: 500px;
+  width: 80px;
+  box-shadow: 0 10px 20px #d8e2dc;
+  background-size: cover;
+}
+
+.Profile-Image{
+  width: 500px;
+  height: 350px;
+  z-index: -1;
+  box-shadow: 0 0 8px 8px white inset;
+}
+
+
+.gradient {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  background: linear-gradient(to top, rgba(28, 171, 238, 0.7), rgba(253, 252, 252, 0.21));
+  color: white;
+}
+
+.content {
+  bottom: 0;
+  position: absolute;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+h2 {
+  font-size: xx-large;
+  letter-spacing: -1px;
+}
+
+.details {
+  font-style: italic;
+  color: rgb(185, 206, 224);
+}
+
+.icons {
+  display: flex;
+  flex-direction: column;
+  top: -30px;
+  position: absolute;
+  left: 85%;
+}
+
+.icons i {
+  font-size: 25px;
+  margin-bottom: 20px;
+  color: rgb(202, 215, 226);
+  transition: 0.3s;
+}
+
+.icons i:hover {
+  color: white;
+}
+
+@media (min-width:200px) {
+  .container {
+      height: 550px;
+      width: 700px;
+  }
+  h2 {
+      font-size: x-large;
+  }
+  .icons i {
+      font-size: large;
+      margin-bottom: 10px;
+  }
+}

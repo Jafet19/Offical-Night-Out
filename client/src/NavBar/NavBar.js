@@ -26,7 +26,6 @@ function NavBar({ setUser}) {
             </label>
             <ul className="content_nav">
               <li><Link to="/Options">OPTIONS</Link></li>
-              <li><Link to="/About">ABOUT</Link></li>
               <li><Link to="/Profile">PROFILE</Link></li>
               <li><Link to="/" onClick={handleLogout}>LOGOUT</Link></li>
             </ul>

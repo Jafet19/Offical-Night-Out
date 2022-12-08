@@ -17,7 +17,7 @@ function OptionCard({ option, onDelete }) {
     return (
       <div className='container-2'>
 <h2>{name}</h2>
-<p>{location}  , {url}</p>
+<p>{location} , {url}</p>
 <h2 onClick={handleDelete}>🗑️ </h2>
 </div> 
     )
